@@ -9,12 +9,12 @@
   <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/xcConfirm.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="css/xcConfirm.css"/>
+
+
 <script type="text/javascript" src="./dist/nebulas.js"></script>
-<link href="css/spop.min.css" rel="stylesheet"/>
+
 <script type="text/javascript" src="./dist/nebPay.js"></script>
-<script  src="js/alert.js"></script>
+
 
 <link rel="stylesheet" type="text/css" href="./css/mobie.css" media="only screen and (max-device-width:700px)">	
 
@@ -43,18 +43,7 @@
             "args": callArgs
         }
     function get(){
-      showLoading({
-            title:"正在拼命加载资源",
-            mask:true,
-            success:function (res) {
-                console.warn(JSON.stringify(res))
-            }
-        });
-        setTimeout(function(){
-            hideLoading()
-        },2000);
-        spop('1已经适配手机端—18.6.14<br>2本站仅提供资源链接搜索服务，不存放任何实质内容。');
-        spop('分享资源需要在chrome浏览器并下载星云钱包<br><br><a href="https://github.com/nebulasio/WebExtensionWallet" target="_blank">星云钱包下载</a>-<a href="https://chinawhite666.github.io/Nebulas-Exchange/help.html" target="_blank">钱包使用教程</a>');
+     
 		console.log("111");
    
 		var callFunction = "getJoker";
@@ -108,47 +97,7 @@
 
 
     
-	$(function(){
-		
 	
-    
-    $("#btn6").click(function(){
-					var txt=  "格式:内容介绍 链接 密码";
-        
-					window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.input,{
-						onOk:function(v){
-              var to = dappContactAddress;
-              var callFunction = "save";
-              var value = "0";
-              var callArgs = "[\"" +v+ "\"]";
-              serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
-                listener: function (resp) {
-                    console.log("thecallback is " + resp)
-                    if(typeof resp == "string"){
-                    console.log("reject! cancel");
-                     alert("已取消上传")
-               
-                    }else{
-                      var a= document.getElementById("list");
-                       var b = document.createElement("blockquote");
-                      b.innerHTML=v;
-                      a.appendChild(b);
-                      alert("上传成功");
-                
-                
-            }
-                }
-            });
-
-
-            
-              
-							console.log(v);
-						}
-					});
-				});
-
-	});
 </script>
 
 </head>
