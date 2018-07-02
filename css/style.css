@@ -9,24 +9,10 @@
   font-size: 16px;
 }
 
-html {
-  padding: 0 1em;
-  background: #F7F7FA;
-}
 
-body {
-  font-family: system, -apple-system, sans-serif;
-  max-width: 40rem;
-  margin: 1em auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscaled;
-  box-sizing: border-box;
-  font-weight: 300;
-}
 
-header {
-  text-align: center;
-}
+
+
 
 header img {
   height: .8em;
